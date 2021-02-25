@@ -16,62 +16,38 @@ SendMode Input
 ; ###### App Launchers #######
 ; ctrl+alt+[key]
 
-; editor (VS Code)
+; legend:
+;  (b)rowser
+;  (c)hat
+;  (e)ditor
+;  (m)ail
+;  (n)otes
+
+; browser
+^!b::
+  run microsoft-edge`:
+  return
+
+; chat
+^!c::
+  IniRead, Home, user.ini, Path, Home
+  run %Home%\AppData\Local\Microsoft\Teams\Update.exe --processStart "Teams.exe"
+  return
+
+; editor
 ^!e::
   IniRead, Home, user.ini, Path, Home
   run % Home . "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
   return
 
-; outlook
-^!o::
-  run Outlook
-  return
-
-; teams
-^!t::
-  IniRead, Home, user.ini, Path, Home
-  run %Home%\AppData\Local\Microsoft\Teams\Update.exe --processStart "Teams.exe"
-  return
-
-; notes (Onenote)
-^!n::
-  run onenote-cmd`:
-  return
-
-; browser (Edge)
-^!b::
-  run microsoft-edge`:
-  return
-
-; teamviewer
-^!v::
-  run "C:\Program Files (x86)\TeamViewer\TeamViewer.exe"
-  return
-
-; slack
-^!s::
-  IniRead, Home, user.ini, Path, Home
-  run % Home . "\AppData\Local\slack\slack.exe"
-  return
-
-; gmail
+; mail
 ^!m::
   run microsoft-edge:https://mail.google.com/mail/u/0/#inbox
   return
 
-; apple music
-^!i::
-  run iTunes
-  return
-
-; plex
-^!p::
-  run "C:\Program Files\Plex\Plex\Plex.exe"
-  return
-
-; bitwarden
-^!l::
-  run "C:\Program Files\Bitwarden\Bitwarden.exe"
+; notes
+^!n::
+  run onenote-cmd`:
   return
 
 ; ###### cut/paste plain text #######

@@ -3,6 +3,7 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+#MaxHotkeysPerInterval 1000
 
 ; suspend/resume hotkeys
 
@@ -44,4 +45,7 @@ F10::Suspend , Off
 #Include .\Shortcut\shortcut_base.ahk
 #Include .\Shortcut\shortcut_user.ahk
 
-#MaxHotkeysPerInterval 1000
+; Hotstrings
+
+#Include .\Hotstring\hotstring_base.ahk
+#Include .\Hotstring\hotstring_user.ahk

@@ -2,19 +2,11 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SendMode Input
 
-; ###### Hotstrings #######
-; key + space/tab/enter
+; INSTRUCTIONS: Apply user customizations here (see shortcut_base.ahk for examples)
 
-; REPLACE ab with your initials
+; ###### App Launchers #######
 
-; personal email
-::ab@::
-  IniRead, Personal, user.ini, Email, Personal
-  SendInput %Personal%
-return
-
-; work email
-::abw@::
-  IniRead, Work, user.ini, Email, Work
-  SendInput %Work%
-return
+; my favorite site
+^!f::
+  run microsoft-edge:https://site.fav
+  return

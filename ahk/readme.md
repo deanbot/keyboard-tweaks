@@ -2,6 +2,14 @@
 
 Provide a suite of keyboard tweaks via a single ahk entrypoint.
 
+## Modules
+
+* __AltGr__ - sybmols layer
+* __Extend__ - navigation/editing layer
+* __Hotstring__ - automatic text replacement
+* __Keymap__ - mappings for Colemak mod dh (ANSI)
+* __Shortcut__ - application launchers and other keyboard shortcuts
+
 ## Get Started
 
 1. Clone or download this repo.

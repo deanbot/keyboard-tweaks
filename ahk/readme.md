@@ -12,7 +12,7 @@ Provide a suite of keyboard tweaks via a single configurable AHK entrypoint.
 
 ## Get Started
 
-1. Clone or download this repo.
+1. Clone or download this repo
 2. Download and install [AutoHotkey](https://www.autohotkey.com/)
 3. Copy or rename `user-template.ini` as `user.ini` and fill in placeholder information. Path is used for shortcuts. Email is used for hotstrings.
 4. Copy or rename `Hotstring\hotstring_user-template.ahk` as `Hotstring\hotstring_user.ahk` and follow instructions in file.

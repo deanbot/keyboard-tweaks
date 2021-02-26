@@ -5,14 +5,18 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #MaxHotkeysPerInterval 1000
 
-; suspend/resume hotkeys
+; global suspend/resume hotkeys
 
 F9::Suspend , On
 F10::Suspend , Off
 
 ; main key mapping
 
-#Include .\Keymap\colemak_mod_dh_ansi.ahk
+#Include .\Keymap\colemak_dh_ansi.ahk
+
+#InputLevel 1
+F8::F19         ; define keymap susp toggle on f8
+#InputLevel 0
 
 ; Extend layer
 

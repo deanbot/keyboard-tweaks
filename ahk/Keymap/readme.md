@@ -9,6 +9,6 @@ ANSI
 * Colemak dh fat-z
 * Colemak dh wide
 
-## Suspend Mapping
+## Suspend Keymap
 
-Keymap can be suspended without suspending other modules.
+Keymap can be suspended without suspending other modules via hotkey configured in `main.ahk` (default: `F8`).

@@ -1,36 +1,30 @@
-SendMode Input
+; SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
-; Colemak Mod-DH mapping for ANSI boards
-;;;PPPP
-; suspend keymap toggle
-susp := 0
-F19::susp := !susp
+#if (susp = 0)
+SC012::f
+SC013::p
+SC014::b
+SC015::j
+SC016::l
+SC017::u
+SC018::y
+SC019::;
 
-SC012::Send, % (!susp) ? "f" : "{SC012}"
-SC013::Send, % (!susp) ? "p" : "{SC013}"
-SC014::Send, % (!susp) ? "b" : "{SC014}"
-SC015::Send, % (!susp) ? "j" : "{SC015}"
-SC016::Send, % (!susp) ? "l" : "{SC016}"
-SC017::Send, % (!susp) ? "u" : "{SC017}"
-SC018::Send, % (!susp) ? "y" : "{SC018}"
-SC019::SendInput, % (!susp) ? ";" : "{SC019}"
-+SC019::Send, % (!susp) ? ":" : "{SC019}"
+SC01F::r
+SC020::s
+SC021::t
+SC023::m
+SC024::n
+SC025::e
+SC026::i
+SC027::o
 
-SC01F::Send, % (!susp) ? "r" : "{SC01F}"
-SC020::Send, % (!susp) ? "s" : "{SC020}"
-SC021::Send, % (!susp) ? "t" : "{SC021}"
-SC023::Send, % (!susp) ? "m" : "{SC023}"
-SC024::Send, % (!susp) ? "n" : "{SC024}"
-SC025::Send, % (!susp) ? "e" : "{SC025}"
-SC026::Send, % (!susp) ? "i" : "{SC026}"
-SC027::Send, % (!susp) ? "o" : "{SC027}"
-
-SC02c::Send, % (!susp) ? "x" : "{SC02c}"
-SC02d::Send, % (!susp) ? "c" : "{SC02d}"
-SC02e::Send, % (!susp) ? "d" : "{SC02e}"
-SC030::Send, % (!susp) ? "z" : "{SC030}"
-SC031::Send, % (!susp) ? "k" : "{SC031}"
-SC032::Send, % (!susp) ? "h" : "{SC032}"
+SC02c::x
+SC02d::c
+SC02e::d
+SC030::z
+SC031::k
+SC032::h
 
 ; set Backspace to CapsLock key
-; :sc03a::Send, % (!susp) ? "{backspace}" : "{capslock}"
+; sc03a::backspace

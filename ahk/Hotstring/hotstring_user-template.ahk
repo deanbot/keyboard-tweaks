@@ -9,12 +9,10 @@ SendMode Input
 
 ; personal email
 ::ab@::
-  IniRead, Personal, user.ini, Email, Personal
-  SendInput %Personal%
+  Send %Personal%
 return
 
 ; work email
 ::abw@::
-  IniRead, Work, user.ini, Email, Work
-  SendInput %Work%
+  Send %Work%
 return

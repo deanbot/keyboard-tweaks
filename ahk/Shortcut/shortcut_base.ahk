@@ -30,13 +30,11 @@ SendMode Input
 
 ; chat
 ^!c::
-  IniRead, Home, user.ini, Path, Home
   run %Home%\AppData\Local\Microsoft\Teams\Update.exe --processStart "Teams.exe"
   return
 
 ; editor
 ^!e::
-  IniRead, Home, user.ini, Path, Home
   run % Home . "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
   return
 

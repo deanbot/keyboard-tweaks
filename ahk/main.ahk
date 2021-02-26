@@ -1,9 +1,17 @@
 #SingleInstance force
+#Persistent
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #MaxHotkeysPerInterval 1000
+
+; global variables must be defined before any hotkeys
+
+susp := 0
+IniRead, Home, user.ini, Path, Home
+IniRead, Personal, user.ini, Email, Personal
+IniRead, Work, user.ini, Email, Work
 
 ; global suspend/resume hotkeys
 
@@ -12,11 +20,10 @@ F10::Suspend , Off
 
 ; main key mapping
 
-#Include .\Keymap\colemak_dh_ansi.ahk
+F5::susp := !susp ; define keymap suspend toggle F5
 
-#InputLevel 1
-F8::F19         ; define keymap susp toggle on f8
-#InputLevel 0
+#Include .\Keymap\colemak_dh_ansi.ahk
+#If ; turn off context sensitivity
 
 ; Extend layer
 

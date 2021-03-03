@@ -22,7 +22,8 @@ F10::Suspend , Off
 
 F5::susp := !susp ; define keymap suspend toggle F5
 
-#Include .\Keymap\colemak_dh_ansi.ahk
+; #Include .\Keymap\colemak_dh_ansi.ahk
+#Include .\Keymap\colemak_dh_wide_ansi.ahk
 #If ; turn off context sensitivity
 
 ; Extend layer

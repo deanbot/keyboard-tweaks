@@ -1,12 +1,13 @@
 ; Colemak Mod-DH wide mapping for ANSI boards
 
+#if (susp = 0)
 ;SC002::1
 ;SC003::2
 ;SC004::3
 ;SC005::4
 ;SC006::5
-SC007::=
-SC008::6
+;SC007::=
+SC008::=
 SC009::7
 SC00a::8
 SC00b::9

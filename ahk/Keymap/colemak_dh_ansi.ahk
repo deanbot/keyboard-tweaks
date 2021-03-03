@@ -27,4 +27,4 @@ SC031::k
 SC032::h
 
 ; set Backspace to CapsLock key
-; sc03a::backspace
+sc03a::backspace
